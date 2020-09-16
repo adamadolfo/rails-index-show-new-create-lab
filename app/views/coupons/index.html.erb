@@ -1,0 +1,10 @@
+<ul>
+    <% @coupons.each do |coupon| %>
+         <li> <%= link_to coupon.coupon_code, coupons_path(@coupon) %> </li>
+    <% end %>
+</ul>
+
+The coupon codes on the index page should 
+link to their corresponding coupon show page. 
+You should use the link_to method and route helper 
+methods instead of hard-coding an HTML <a> tag.
