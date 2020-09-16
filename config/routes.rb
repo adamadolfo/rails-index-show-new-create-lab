@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   get "/coupons", to: 'coupons#index'
+  get "/coupons/new", to: 'coupons#new' 
+  get "/coupons/:id", to: 'coupons#show', as: "coupon"
+  post "/coupons", to: "coupons#create"
+  
+  # The new.html.erb view template should render a form that uses the form_tag method.
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
